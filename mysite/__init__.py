@@ -1,1 +1,1 @@
-"""package have files with settings for the project."""
+"""Settings for Blog app."""

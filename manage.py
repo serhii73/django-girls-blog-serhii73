@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Module to manage Django Girls project."""
+"""To manage Blog app."""
 import os
 import sys
 
