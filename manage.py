@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""To manage Blog app."""
+"""Blog app manager."""
 import os
 import sys
 
