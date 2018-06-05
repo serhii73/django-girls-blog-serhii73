@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""django-admin is Django’s command-line utility for administrative tasks."""
+"""Module to manage Django Girls project."""
 import os
 import sys
 

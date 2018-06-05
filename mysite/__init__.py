@@ -1,1 +1,1 @@
-"""Initialize the package when created Django project."""
+"""package have files with settings for the project."""
