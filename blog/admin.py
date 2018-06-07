@@ -1,3 +1,3 @@
-from django.contrib import admin
+"""Settings for admin Blog app."""
 
 # Register your models here.
