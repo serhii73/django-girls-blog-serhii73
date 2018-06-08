@@ -1,3 +1,3 @@
-"""Business logic Blog app."""
+"""Views for the blog app."""
 
 # Create your views here.
