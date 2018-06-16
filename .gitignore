@@ -81,3 +81,6 @@ fabric.properties
 
 
 # End of https://www.gitignore.io/api/django,pycharm
+
+# Add all idea files
+.idea/
