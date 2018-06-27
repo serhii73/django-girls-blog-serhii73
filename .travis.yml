@@ -1,5 +1,8 @@
 language: python
 python: 3.6
 cache: pip
-before_install: pip install -U pre-commit
+before_install:
+- pip install -U pre-commit
+- pip install pylint-django==0.11.1
+- pip install Django==2.0.5
 script: pre-commit run --all-files
