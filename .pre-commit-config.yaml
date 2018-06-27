@@ -34,7 +34,7 @@
         "".join([os.getenv("HOME"), "/virtualenv/python", platform.python_version(),
         "/lib/python", ".".join(platform.python_version_tuple()[:2]), "/site-packages"])
         if os.getenv("TRAVIS") else
-        "~/.virtualenv/django_girls/lib/python3.6/site-packages"
+        "/home/sergey/.virtualenv/django_girls/lib/python3.6/site-packages"
         )  # inject virtualenv packages into a module search path; could also go for pylint-venv hook
     - --load-plugins=pylint_django
     - --good-names=pk,urlpatterns
