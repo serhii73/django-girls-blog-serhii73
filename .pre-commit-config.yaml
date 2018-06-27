@@ -18,3 +18,24 @@
   hooks:
   - id: pydocstyle
     exclude: blog/migrations
+
+- repo: git://github.com/pre-commit/mirrors-pylint.git
+  rev: v1.9.1
+  hooks:
+  - id: pylint
+    args:
+    - --msg-template={path}:L {line:3d}:({symbol}) {msg} (C {column:2d}), ::{msg_id}
+    - --output-format=colorized
+    - |-
+        --init-hook=
+        import os, platform, shutil, sys;
+        sys.path.insert(
+        0,
+        "".join([os.getenv("HOME"), "/virtualenv/python", platform.python_version(),
+        "/lib/python", ".".join(platform.python_version_tuple()[:2]), "/site-packages"])
+        if os.getenv("TRAVIS") else
+        shutil.which("python").split("bin/python")[0] + "lib/python3.6/site-packages"
+        )  # inject virtualenv packages into a module search path; could also go for pylint-venv hook
+    - --load-plugins=pylint_django
+    - --good-names=pk,urlpatterns
+    exclude: blog/migrations/
