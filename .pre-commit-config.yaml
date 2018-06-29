@@ -28,13 +28,13 @@
     - --output-format=colorized
     - |-
         --init-hook=
-        import os, platform, shutil, sys;
+        import os, platform, sys;
         sys.path.insert(
             0,
             "".join([os.getenv("HOME"), "/virtualenv/python", platform.python_version(),
             "/lib/python", ".".join(platform.python_version_tuple()[:2]), "/site-packages"])
             if os.getenv("TRAVIS") else
-            "".join([os.getenv("HOME"), "/.virtualenv/django_girls/lib/python", platform.python_version(), "/site-packages"])
+            "".join([os.getenv("HOME"), "/.virtualenv/django_girls/lib/python", '.'.join(map(str, sys.version_info[:2])), "/site-packages"])
         )  # inject virtualenv packages into a module search path; could also go for pylint-venv hook
     - --load-plugins=pylint_django
     - --good-names=pk,urlpatterns
