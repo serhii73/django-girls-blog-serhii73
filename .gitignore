@@ -84,3 +84,6 @@ fabric.properties
 
 # Add all idea files
 .idea/
+
+# env vars
+.env
